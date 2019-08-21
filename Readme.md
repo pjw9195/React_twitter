@@ -40,3 +40,9 @@ npm run dev
 ![image](https://user-images.githubusercontent.com/26537104/63342832-71dfbb80-c387-11e9-9dfb-f6c6093e8f4a.png)
 
 ![image](https://user-images.githubusercontent.com/26537104/63342867-8e7bf380-c387-11e9-91c7-159db74c6e75.png)
+
+### input required 와 style
+
+![image](https://user-images.githubusercontent.com/26537104/63417101-9b5a1f00-c43b-11e9-92bf-ef60b510e2f1.png)
+
+style은 {{}}형식이며, required 를 붙여주면 조건이 붙는다.
