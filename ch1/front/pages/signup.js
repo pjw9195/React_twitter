@@ -10,21 +10,30 @@ const Signup = () => {
   const [passwordCheck, setPasswordCheck] = useState('');
   const [term, setTerm] = useState(false);
 
-  const onSubmit = () => {};
+  const onSubmit = e => {
+    e.preventDefault();
+    console.log({
+      id,
+      nick,
+      password,
+      passwordCheck,
+      term,
+    });
+  };
   const onChangeId = e => {
     setId(e.target.value);
   };
-  const onChangeNick = () => {
+  const onChangeNick = e => {
     setNick(e.target.value);
   };
-  const onChangePassword = () => {
+  const onChangePassword = e => {
     setPassword(e.target.value);
   };
-  const onChangePasswordChk = () => {
+  const onChangePasswordChk = e => {
     setPasswordCheck(e.target.value);
   };
-  const onChangeTerm = () => {
-    setTerm(e.target.value);
+  const onChangeTerm = e => {
+    setTerm(e.target.checked);
   };
   return (
     <>
