@@ -69,3 +69,22 @@ useCallback 은 useMemo와 상당히 비슷한 함수입니다. 주로 렌더링
 ![image](https://user-images.githubusercontent.com/26537104/63747069-3726d780-c8e1-11e9-9137-a92f607fab62.png)
 
 next 는 app.js를 자동으로 인식하고 app.js의 nodebird는 component 인자를 가져서 저절로 layout 기능을 할 수 있게 한다.
+
+### prop-types
+
+```
+npm i prop-types
+```
+안정화를 위하여 부모가 자료형을 정해주면 자식이 잘 받았나 확인하는 module
+
+![image](https://user-images.githubusercontent.com/26537104/63747900-2a0ae800-c8e3-11e9-9583-4ccf7c5b5aaa.png)
+
+node는 모든 것, 배열, 숫자, 문자 등 많은 것이 가능.
+https://www.npmjs.com/package/prop-types
+
+### 그리디시스템
+
+xs : 모바일 // 한줄최대는 24
+md : 중간 화면
+sm : 작은 화면
+lg : 큰 화면

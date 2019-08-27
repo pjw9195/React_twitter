@@ -1,16 +1,17 @@
 import React from 'react';
-import { Menu, Input, Button } from 'antd';
+import { Menu, Input, Button, Row, Col, Card, Avatar } from 'antd';
 import Head from 'next/head';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
+const dummy = {
+  nickname: '제로초',
+  Post: [],
+  Followings: [],
+  Followers: [],
+};
 const AppLayout = ({ children }) => {
   return (
     <div>
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/antd/3.22.0/antd.css"
-        />
-      </Head>
       <Menu mode="horizontal">
         <Menu.Item key={'home'}>
           <Link href="/">
@@ -31,8 +32,41 @@ const AppLayout = ({ children }) => {
           <Button>회원가입</Button>
         </a>
       </Link>
+      <Row>
+        <Col xs={24} md={6}>
+          <Card
+            actions={[
+              <div key="twit">
+                짹짹 <br />
+                {dummy.Post.length}
+              </div>,
+              <div key="profile">
+                팔로잉 <br />
+                {dummy.Followings.length}
+              </div>,
+              <div key="mail">
+                팔로워 <br />
+                {dummy.Followers.length}
+              </div>,
+            ]}>
+            <Card.Meta
+              avatar={<Avatar>{dummy.nickname[0]}</Avatar>}
+              title={dummy.nickname}
+            />
+          </Card>
+        </Col>
+        <Col xs={24} md={12}>
+          두번째
+        </Col>
+        <Col xs={24} md={6}>
+          세번째
+        </Col>
+      </Row>
       {children}
     </div>
   );
+};
+AppLayout.PropTypes = {
+  children: PropTypes.node,
 };
 export default AppLayout;
