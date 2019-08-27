@@ -46,3 +46,20 @@ npm run dev
 ![image](https://user-images.githubusercontent.com/26537104/63417101-9b5a1f00-c43b-11e9-92bf-ef60b510e2f1.png)
 
 style은 {{}}형식이며, required 를 붙여주면 조건이 붙는다.
+
+### Custom hook
+
+![image](https://user-images.githubusercontent.com/26537104/63741597-b364ef00-c8d0-11e9-8246-0cc5fa384086.png)
+
+### React hook을 사용하기 위한 useState
+
+useState는 무엇을 반환할까요?  
+**state 변수, 해당 변수를 갱신할 수 있는 함수 이 두 가지 쌍을 반환합니다.**  
+이것이 바로 const [count, setCount] = useState()라고 쓰는 이유입니다. 클래스 컴포넌트의 this.state.count와 this.setState와 유사합니다. 만약 이러한 문법에 익숙하지 않다면 현재 페이지의 끝에서 살펴볼게요.
+
+### useCallback
+
+useCallback 은 useMemo와 상당히 비슷한 함수입니다. 주로 렌더링 성능을 최적화해야 하는 상황에서 사용하는데요, 이 Hook을 사용하면 이벤트 핸들러 함수를 필요할 때만 생성 할 수 있습니다.
+우리가 방금 구현한 Average 컴포넌트를 보면, onChange 와 onInsert 라는 함수를 선언해주었습니다. 이렇게 선언을 하게 되면 컴포넌트가 리렌더링 될 때마다 이 함수들이 새로 생성됩니다. 대부분의 경우에는 이러한 방식이 문제가 되지 않지만, 컴포넌트의 렌더링이 자주 발생하거나, 렌더링 해야 할 컴포넌트의 개수가 많아진다면 이 부분을 최적화 해주시는 것이 좋습니다.
+
+![image](https://user-images.githubusercontent.com/26537104/63743080-13aa5f80-c8d6-11e9-82fb-45b487daad92.png)
