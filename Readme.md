@@ -59,7 +59,7 @@ useState는 무엇을 반환할까요?
 
 ### useCallback
 
-useCallback 은 useMemo와 상당히 비슷한 함수입니다. 주로 렌더링 성능을 최적화해야 하는 상황에서 사용하는데요, 이 Hook을 사용하면 이벤트 핸들러 함수를 필요할 때만 생성 할 수 있습니다.
+useCallback 은 useMemo와 상당히 비슷한 함수입니다. 주로 렌더링 성능을 최적화해야 하는 상황에서 사용하는데요, 이 Hook을 사용하면 이벤트 핸들러 함수를 필요할 때만 생성 할 수 있습니다.  
 우리가 방금 구현한 Average 컴포넌트를 보면, onChange 와 onInsert 라는 함수를 선언해주었습니다. 이렇게 선언을 하게 되면 컴포넌트가 리렌더링 될 때마다 이 함수들이 새로 생성됩니다. 대부분의 경우에는 이러한 방식이 문제가 되지 않지만, 컴포넌트의 렌더링이 자주 발생하거나, 렌더링 해야 할 컴포넌트의 개수가 많아진다면 이 부분을 최적화 해주시는 것이 좋습니다.
 
 ![image](https://user-images.githubusercontent.com/26537104/63743080-13aa5f80-c8d6-11e9-82fb-45b487daad92.png)
@@ -75,16 +75,18 @@ next 는 app.js를 자동으로 인식하고 app.js의 nodebird는 component 인
 ```
 npm i prop-types
 ```
+
 안정화를 위하여 부모가 자료형을 정해주면 자식이 잘 받았나 확인하는 module
 
 ![image](https://user-images.githubusercontent.com/26537104/63747900-2a0ae800-c8e3-11e9-9583-4ccf7c5b5aaa.png)
 
-node는 모든 것, 배열, 숫자, 문자 등 많은 것이 가능.
+node는 모든 것, 배열, 숫자, 문자 등 많은 것이 가능.  
+elementType 은 태그로 쓸 수 있는 것
 https://www.npmjs.com/package/prop-types
 
 ### 그리디시스템
 
-xs : 모바일 // 한줄최대는 24
-md : 중간 화면
-sm : 작은 화면
+xs : 모바일 // 한줄최대는 24  
+md : 중간 화면  
+sm : 작은 화면  
 lg : 큰 화면
