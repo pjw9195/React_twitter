@@ -63,3 +63,9 @@ useCallback 은 useMemo와 상당히 비슷한 함수입니다. 주로 렌더링
 우리가 방금 구현한 Average 컴포넌트를 보면, onChange 와 onInsert 라는 함수를 선언해주었습니다. 이렇게 선언을 하게 되면 컴포넌트가 리렌더링 될 때마다 이 함수들이 새로 생성됩니다. 대부분의 경우에는 이러한 방식이 문제가 되지 않지만, 컴포넌트의 렌더링이 자주 발생하거나, 렌더링 해야 할 컴포넌트의 개수가 많아진다면 이 부분을 최적화 해주시는 것이 좋습니다.
 
 ![image](https://user-images.githubusercontent.com/26537104/63743080-13aa5f80-c8d6-11e9-82fb-45b487daad92.png)
+
+### Next 의 \_app.js 의 기능
+
+![image](https://user-images.githubusercontent.com/26537104/63747069-3726d780-c8e1-11e9-9137-a92f607fab62.png)
+
+next 는 app.js를 자동으로 인식하고 app.js의 nodebird는 component 인자를 가져서 저절로 layout 기능을 할 수 있게 한다.
