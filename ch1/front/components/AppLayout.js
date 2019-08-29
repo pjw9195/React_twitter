@@ -30,7 +30,7 @@ const AppLayout = ({ children }) => {
           <Input.Search enterButton style={{ verticalAlign: 'middle' }} />
         </Menu.Item>
       </Menu>
-      <Row>
+      <Row gutter={8}>
         <Col xs={24} md={6}>
           {dummy.isLoggedIn ? (
             <Card
@@ -58,13 +58,12 @@ const AppLayout = ({ children }) => {
           )}
         </Col>
         <Col xs={24} md={12}>
-          두번째
+          {children}
         </Col>
         <Col xs={24} md={6}>
           세번째
         </Col>
       </Row>
-      {children}
     </div>
   );
 };
