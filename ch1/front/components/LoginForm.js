@@ -4,6 +4,7 @@ import { Menu, Input, Button, Row, Col, Card, Avatar, Form } from 'antd';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useInput } from '../pages/signup';
+
 const LoginForm = () => {
   const [id, onChangeId] = useInput('');
   const [password, onChangePassword] = useInput('');
@@ -32,7 +33,7 @@ const LoginForm = () => {
           required
         />
       </div>
-      <div>
+      <div style={{ marginTop: '10px' }}>
         <Button type="primary" htmlType="submit" loading={false}>
           로그인
         </Button>
