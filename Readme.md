@@ -94,3 +94,15 @@ lg : 큰 화면
 ### git ignore 하위폴더 제외
 
 \*\*/폴더이름/
+
+### Redux
+
+```
+npm i react-redux redux
+```
+
+**React랑 React+Redux의 결정적 차이**  
+React는 React 컴포넌트 자신이 개별적으로 상태관리를 한다.
+React+Redux는 상태관리를 하는 전용 장소(store)에서 상태를 관리하고,  
+React 컴포넌트는 그걸 보여주기만 하는 용도로 쓰인다.
+![](https://miro.medium.com/max/1401/0*Z18iLsM7Bf1xoNth.)
