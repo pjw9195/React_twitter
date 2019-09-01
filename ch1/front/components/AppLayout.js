@@ -5,13 +5,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import LoginForm from './LoginForm';
 import UserProfile from './UserProfile';
-const dummy = {
-  nickname: '제로초',
-  Post: [],
-  Followings: [],
-  Followers: [],
-  isLoggedIn: false,
-};
+
 const AppLayout = ({ children }) => {
   return (
     <div>

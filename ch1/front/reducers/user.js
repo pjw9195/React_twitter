@@ -1,17 +1,22 @@
 export const initialState = {
   isLoggedIn: false,
-  user: {},
+  user: {
+    nickname: '제로초',
+    Post: [],
+    Followings: [],
+    Followers: [],
+  },
 };
 
-const LOG_IN = 'LOG_IN';
-const LOG_OUT = 'LOG_OUT';
-const loginAction = {
+export const LOG_IN = 'LOG_IN';
+export const LOG_OUT = 'LOG_OUT';
+export const loginAction = {
   type: LOG_IN,
   data: {
     nickname: 'jinwoo',
   },
 };
-const logoutAction = {
+export const logoutAction = {
   type: LOG_OUT,
 };
 const reducer = (state = initialState, action) => {
@@ -28,6 +33,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         isLoggedIn: false,
         user: null,
+      };
+    }
+    default: {
+      return {
+        ...state,
       };
     }
   }

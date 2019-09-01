@@ -106,3 +106,39 @@ React는 React 컴포넌트 자신이 개별적으로 상태관리를 한다.
 React+Redux는 상태관리를 하는 전용 장소(store)에서 상태를 관리하고,  
 React 컴포넌트는 그걸 보여주기만 하는 용도로 쓰인다.
 ![](https://miro.medium.com/max/1401/0*Z18iLsM7Bf1xoNth.)
+
+- reducer 설계
+  ![image](https://user-images.githubusercontent.com/26537104/64017141-d4913e00-cb63-11e9-9b81-743def01b2de.png)
+
+- index.js 에서 reducer 여러 개 합치기 (Combinereducer 사용)
+
+![image](https://user-images.githubusercontent.com/26537104/64017259-1e7a2400-cb64-11e9-8c52-b53061bbb605.png)
+
+- wrapper 기능으로 store 구현
+
+```
+npm i next-redux-wrapper
+```
+
+![image](https://user-images.githubusercontent.com/26537104/64017792-75ccc400-cb65-11e9-80be-e76c8a14c656.png)
+
+- Redux devtools 를 사용하기 위한 middleware 구현
+
+![image](https://user-images.githubusercontent.com/26537104/64021545-2f7c6280-cb6f-11e9-9d8d-e8c17ed93ff2.png)
+
+- redux 에서 사용하는 Hook
+
+```
+npm i react-redux@next
+```
+
+`import { useDispatch,useSelector } from 'react-redux';`
+
+- hook 을 사용하여 action을 주는 방법
+  ![image](https://user-images.githubusercontent.com/26537104/64072866-fd831180-ccd0-11e9-8fbd-405e17df2171.png)
+
+- useSelector 를 사용해서 안에 state내의 변수를 사용할 수 있다.
+
+```
+ const { user, isLoggedIn } = useSelector(state => state.user);
+```
