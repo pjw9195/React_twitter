@@ -12,15 +12,7 @@ const Home = () => {
   const user = useSelector(state => state.user.user);
   const isLoggedIn = useSelector(state => state.user.isLoggedIn);
   const { mainPosts } = useSelector(state => state.post);
-  useEffect(() => {
-    dispatch({
-      type: LOG_IN,
-      data: {
-        nickname: '제로초',
-      },
-    });
-    dispatch(loginAction);
-  }, []);
+  useEffect(() => {}, []);
   return (
     <div>
       {user ? (

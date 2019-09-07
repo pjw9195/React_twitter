@@ -3,6 +3,8 @@ import AppLayout from '../components/AppLayout';
 import Head from 'next/head';
 import { Form, Input, Checkbox, Button } from 'antd';
 import React from 'react';
+import { signUpAction } from '../reducers/user';
+import { useDispatch } from 'react-redux';
 
 export const useInput = (initValue = null) => {
   const [value, setter] = useState(initValue);
@@ -16,7 +18,7 @@ const Signup = () => {
   const [term, setTerm] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [termError, setTermError] = useState(false);
-
+  const dispatch = useDispatch();
   const [id, onChangeId] = useInput('');
   const [password, onChangePassword] = useInput('');
   const [nick, onChangeNick] = useInput('');
@@ -39,6 +41,13 @@ const Signup = () => {
       if (!term) {
         return setTermError(true);
       }
+      dispatch(
+        signUpAction({
+          id,
+          password,
+          nick,
+        })
+      );
     },
     [password, passwordCheck, term]
   );

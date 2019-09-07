@@ -142,3 +142,20 @@ npm i react-redux@next
 ```
  const { user, isLoggedIn } = useSelector(state => state.user);
 ```
+
+### Redux의 단점을 보완해주기 위한 redux-saga
+
+```
+npm i redux-saga
+```
+
+redux는 동기적으로 작동하여, 간단하게 값만 바꿔줄 수 있다. 하지만 redux-saga를 이용하여 비동기적으로 돌아가게 할 수 있다.
+
+### React State 와 Redux State
+
+- redux state 함수형으로 만들어줘서 데이터를 받아와 저장한다.
+  ![image](https://user-images.githubusercontent.com/26537104/64472166-29047100-d195-11e9-840f-142e248bff37.png)
+
+- onsubmit 안에 dispatch를 하여 값이 들어올 때 마다 바꿔준다?
+
+![image](https://user-images.githubusercontent.com/26537104/64472172-53562e80-d195-11e9-9737-7cf80fa2523c.png)
